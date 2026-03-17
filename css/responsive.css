@@ -38,6 +38,18 @@
     }
     
     
+    /* Contact info - Horizontal layout */
+    .contact-info {
+        flex-wrap: wrap;
+        gap: var(--spacing-2xl);
+        justify-content: center;
+    }
+
+    .info-item {
+        flex: 0 0 auto;
+        min-width: 150px;
+    }
+    
     /* Checkbox group - Single column on tablet */
     .checkbox-group {
         grid-template-columns: 1fr;
@@ -263,15 +275,14 @@
     /* ============ CONTACT SECTION MOBILE ============ */
     
     .contact-info {
-        gap: var(--spacing-xl);
-    }
-    
-    .contact-info h3 {
-        font-size: var(--font-size-lg);
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+        flex-direction: row;
     }
     
     .info-item {
         gap: var(--spacing-md);
+        flex: 0 0 calc(50% - var(--spacing-sm));
     }
     
     .info-item i {
