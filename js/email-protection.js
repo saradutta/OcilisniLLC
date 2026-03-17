@@ -14,7 +14,7 @@
         if (!emailElement) return;
 
         // Obfuscated email (reversed)
-        const obfuscatedEmail = 'moc.isilco@attud.aras';
+        const obfuscatedEmail = 'moc.insilico@attudaras';
         const decodedEmail = decodeEmail(obfuscatedEmail);
         
         // Create email link safely
