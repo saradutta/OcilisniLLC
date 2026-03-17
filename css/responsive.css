@@ -37,11 +37,6 @@
         height: 250px;
     }
     
-    /* Contact Wrapper - Stack vertically */
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-2xl);
-    }
     
     /* Checkbox group - Single column on tablet */
     .checkbox-group {
@@ -281,29 +276,6 @@
     
     .info-item i {
         font-size: var(--font-size-xl);
-    }
-    
-    .contact-form {
-        padding: var(--spacing-lg);
-    }
-    
-    .form-group {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .form-group label {
-        font-size: var(--font-size-xs);
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: 16px; /* Prevent zoom on iOS */
-    }
-    
-    .checkbox-group {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
     }
     
     /* ============ BUTTONS MOBILE ============ */
