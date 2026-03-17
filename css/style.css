@@ -260,7 +260,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0F766E 0%, #0369A1 100%);
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.5) 0%, rgba(3, 105, 161, 0.5) 100%), url('../home-pic.jpg') center / cover no-repeat;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -351,6 +351,16 @@ section {
 .about-photo {
     display: flex;
     justify-content: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+    border: 3px solid white;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .photo-placeholder {
