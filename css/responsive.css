@@ -1,0 +1,420 @@
+/* ============================================================
+   OCILISNI - RESPONSIVE DESIGN
+   Mobile-first approach with breakpoints at 768px, 1024px
+   ============================================================ */
+
+/* ============ TABLET (768px and up) ============ */
+
+@media (max-width: 1023px) {
+    /* Adjust spacing for tablet */
+    section {
+        padding: var(--section-padding-tablet) 0;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Services Grid - Single column on smaller devices */
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    /* About Content - Stack vertically */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .about-photo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .photo-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Contact Wrapper - Stack vertically */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    /* Checkbox group - Single column on tablet */
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer Grid */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+/* ============ MOBILE (480px to 767px) ============ */
+
+@media (max-width: 767px) {
+    /* Base Sizing */
+    :root {
+        --section-padding-desktop: var(--section-padding-mobile);
+    }
+    
+    html {
+        font-size: 16px;
+        scroll-padding-top: 60px;
+    }
+    
+    body {
+        font-size: var(--font-size-sm);
+    }
+    
+    section {
+        padding: var(--section-padding-mobile) 0;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* ============ HEADER MOBILE ============ */
+    
+    .header-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-lg);
+    }
+    
+    .logo-tagline {
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Navigation - Mobile Menu */
+    .nav {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: var(--color-light);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-md);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: var(--spacing-lg) var(--spacing-md);
+        border-bottom: 1px solid var(--color-medium-gray);
+        width: 100%;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link.active {
+        background-color: rgba(15, 118, 110, 0.1);
+        border-left: 4px solid var(--color-primary);
+    }
+    
+    /* Hamburger Menu - Show on Mobile */
+    .hamburger {
+        display: flex;
+    }
+    
+    .header-cta {
+        display: none;
+    }
+    
+    /* ============ HERO SECTION MOBILE ============ */
+    
+    .hero {
+        min-height: 60vh;
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero-content {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* ============ SECTION TITLES MOBILE ============ */
+    
+    .section-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    /* ============ ABOUT SECTION MOBILE ============ */
+    
+    .about-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .photo-placeholder {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .photo-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-name {
+        font-size: var(--font-size-xl);
+    }
+    
+    .credentials {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .credential-badge {
+        display: inline-block;
+        font-size: var(--font-size-xs);
+    }
+    
+    .about-bio {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .experience-title {
+        font-size: var(--font-size-lg);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .experience-list {
+        gap: var(--spacing-md);
+    }
+    
+    .about-cta {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .about-cta .btn {
+        width: 100%;
+    }
+    
+    /* ============ SERVICES SECTION MOBILE ============ */
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .service-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .service-list li {
+        font-size: var(--font-size-xs);
+    }
+    
+    /* ============ TESTIMONIALS SECTION MOBILE ============ */
+    
+    .placeholder-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .placeholder-content h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* ============ CONTACT SECTION MOBILE ============ */
+    
+    .contact-info {
+        gap: var(--spacing-xl);
+    }
+    
+    .contact-info h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .info-item {
+        gap: var(--spacing-md);
+    }
+    
+    .info-item i {
+        font-size: var(--font-size-xl);
+    }
+    
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+    
+    .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .form-group label {
+        font-size: var(--font-size-xs);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* ============ BUTTONS MOBILE ============ */
+    
+    .btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        min-height: 44px; /* Touch target */
+    }
+    
+    .btn-large {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    
+    /* ============ FOOTER MOBILE ============ */
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ============ SMALL MOBILE (up to 479px) ============ */
+
+@media (max-width: 479px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+    
+    .section-title {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+    }
+    
+    .photo-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* ============ ACCESSIBILITY - PREFERS REDUCED MOTION ============ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============ HIGH CONTRAST MODE ============ */
+
+@media (prefers-contrast: more) {
+    .btn-primary,
+    .btn-secondary {
+        border: 2px solid currentColor;
+    }
+    
+    .nav-link {
+        border-bottom: 2px solid transparent;
+    }
+    
+    .service-card {
+        border: 2px solid var(--color-dark);
+    }
+}
+
+/* ============ PRINT STYLES ============ */
+
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    header,
+    footer,
+    .btn,
+    .contact-form {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        padding: 1rem 0;
+    }
+}
